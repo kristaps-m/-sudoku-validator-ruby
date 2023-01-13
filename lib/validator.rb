@@ -46,6 +46,8 @@ class Validator
     array_of_numbers = create_one_dimensional_array_of_numbers(@puzzle_string)
     real_sudoku_array = create_two_dimensional_sudoku_array(array_of_numbers)
 
-    return is_one_sudoku_valid(real_sudoku_array)
+    sudoku_validator = SudokuValidator.new()
+
+    return sudoku_validator.is_one_sudoku_field_valid(real_sudoku_array)
   end
 end
